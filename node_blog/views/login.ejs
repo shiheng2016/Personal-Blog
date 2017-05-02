@@ -1,0 +1,30 @@
+<!-- 头部内容 -->
+<%- include ./common/header %>
+
+    <body>
+        <!-- 顶部导航内容 -->
+        <%- include ./common/nav %>
+
+            <div class="container">
+                <div class="blog-header">
+                    <h1 class="blog-title">ShiXiaomo's Blog</h1>
+                    <hr/>
+                    <p class="lead blog-description">欢迎来到石小墨的博客，让我们一起去探索生活，开辟趣味的新世界!</p>
+                </div>
+
+                <!-- 登录输入界面 -->
+                <form class="form-signin" action="/login.do" method="POST">
+                    <h2 class="form-signin-heading">
+                        <span class="glyphicon glyphicon-user"></span>&nbsp;你好！请登录
+                    </h2>
+                    <label for="inputUsrname" class="sr-only">UserName</label>
+                    <input type="text" id="inputUsrname" name="username" class="form-control" placeholder="请输入用户名称" required autofocus/>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="请输入用户密码" required/>
+                    <span class="errinfo"><%= errinfo %></span>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+                </form>
+            </div>
+
+            <!-- 底部页尾内容 -->
+            <%- include ./common/footer %>
